@@ -21,7 +21,7 @@ putchar(m + '0');
 putchar(n + '0');
 if (k < 700)
 {
-putchar(4);
+putchar(44);
 putchar(32);
 }
 }    }
