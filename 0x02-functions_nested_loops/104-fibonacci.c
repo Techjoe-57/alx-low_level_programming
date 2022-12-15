@@ -25,13 +25,13 @@ int main(void)
 			printf("%lu%010lu", fr2, bk2);
 		}
 		else
-		{ 
+		{
 			hold2 = bk1 + bk2;
 			bk1 = bk2, bk2 = hold2;
 			printf("%lu", bk2);
 		}
 		if (count != 97)
-			printf (", ");
+			printf(", ");
 	}
 	printf("\n");
 	return (0);
