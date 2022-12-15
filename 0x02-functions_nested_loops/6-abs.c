@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * -abs - compute the absolute value of an integer
+ * _abs - compute the absolute value of an integer
  *  @q: int datatype number
  *  Return: value
  */
