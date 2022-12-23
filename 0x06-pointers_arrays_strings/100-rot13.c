@@ -12,19 +12,13 @@ char *rot13(char *s)
 	char string_rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
 	char string_alpha[] = "nopqrstuvwxyzabcdefghijklm";
 
-	while (s[i] != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		do {
-			if (s[i] == string_alpha[j])
-			{
-				s[i] = string_rot13[j];
-				break;
-			}
-			j++;
-		} while (string_alpha[j] != '\0');
-		j = 0;
-		i++;
+		if ((s[i] > 64 && s[i] < 91) || (s[i] > 96 && s[i] < 123))
+		{
+			s[i] = (s[i] - 65 > 25) ?
+				storel[s[i] - 97] : storeh[s[i] - 65];
+		}
 	}
-
 	return (s);
 }
