@@ -11,8 +11,9 @@
 
 int main(int argc, char *argv[])
 {
-unsigned long mul;
-int i, j;
+	unsigned long mul;
+	int i, j;
+
 	if (argc != 3)
 	{
 		printf("Error\n");
@@ -28,5 +29,5 @@ int i, j;
 	}
 	mul = atol(argv[1]) * atol(argv[2]);
 	printf("%lu\n", mul);
-return (0);
+	return (0);
 }
