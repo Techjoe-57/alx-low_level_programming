@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- *  str_concat - function concatenates two strings.
+ * str_concat - function concatenates two strings.
  * @s1: first string
  * @s2: second string
  * Return: pointer of an array of chars
@@ -36,7 +36,7 @@ char *str_concat(char *s1, char *s2)
 		strpt[k] = s1[k];
 
 	limit = j;
-	for (j = 0; j <= limit; j++)
+	for (j = 0; j <= limit; k++, j++)
 		strpt[k] = s2[j];
 
 	return (strpt);
