@@ -19,5 +19,6 @@ size_t print_list(const list_t *h)
 		current = current->next;
 		c++;
 	}
+
 	return (c);
 }
