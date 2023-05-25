@@ -1,0 +1,13 @@
+#2-Makefile
+
+#Defining required variables in Macros
+CC = gcc
+SRC = main.c school.c
+NAME = school
+OBJ = $(SRC:.c=.o) #Creates object files of all SRC files
+
+#Rule all: uses the variables to build the executable
+#1. Updates .o files first
+#2. Compiles .o files with the executable
+all:$(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
