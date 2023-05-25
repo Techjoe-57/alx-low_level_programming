@@ -1,0 +1,28 @@
+# 3-Makefile
+
+# Setting specified variables
+CC = gcc
+SRC = main.c school.c
+NAME = school
+OBJ = $(SRC:.c=.o)
+RM = rm -f
+
+# Rule all: Recompile only updated sourc files
+all: $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Rule clean: deletes all Emacs and Vim temporary files along with the executable
+clean:
+	$(RM) *~ $(NAME)
+
+# Rule oclean: deletes the object files
+oclean:
+	$(RM) $(SRC)
+
+# Rule fclean: Performs the clean clean rule, oclean rule and deletes the executable
+fclean:
+	$(RM) *~ $(NAME)
+	$(RM) $(OBJ)
+
+# Rule re: forces recompilation of all sources files
+re: oclean all
