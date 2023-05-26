@@ -17,7 +17,7 @@ clean:
 
 # Rule oclean: deletes the object files
 oclean:
-	$(RM) $(SRC)
+	$(RM) $(OBJ)
 
 # Rule fclean: Performs the clean clean rule, oclean rule and deletes the executable
 fclean:
