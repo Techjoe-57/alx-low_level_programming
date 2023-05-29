@@ -5,12 +5,11 @@ CC = gcc
 SRC = main.c school.c
 NAME = school
 OBJ = $(SRC:.c=.o)
-RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # Rule all: Builds the executable
 all: m.h $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 # Rule clean: deletes all Emacs and Vim temporary 
 # files along with the executable
